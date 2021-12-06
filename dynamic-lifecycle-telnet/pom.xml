@@ -21,7 +21,7 @@
         <module>dynamic-lifecycle-telnet-ordered</module>
         <module>dynamic-lifecycle-telnet-remoting</module>
         <module>dynamic-lifecycle-telnet-model</module>
-        <module>dynamic-lifecycle-telnet-spring-content-holder</module>
+        <module>dynamic-lifecycle-telnet-spring-context-holder</module>
     </modules>
 
     <dependencies>
@@ -46,7 +46,7 @@
             </dependency>
             <dependency>
                 <groupId>com.photowey</groupId>
-                <artifactId>dynamic-lifecycle-telnet-spring-content-holder
+                <artifactId>dynamic-lifecycle-telnet-spring-context-holder
                 </artifactId>
                 <version>${project.version}</version>
             </dependency>

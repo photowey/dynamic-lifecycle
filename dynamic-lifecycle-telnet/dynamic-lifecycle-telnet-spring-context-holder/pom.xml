@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dynamic-lifecycle-telnet-spring-content-holder</artifactId>
-    <name>dynamic-lifecycle-telnet-spring-content-holder</name>
-    <description>Dynamic-lifecycle-telnet-spring-content-holder project for
+    <artifactId>dynamic-lifecycle-telnet-spring-context-holder</artifactId>
+    <name>dynamic-lifecycle-telnet-spring-context-holder</name>
+    <description>Dynamic-lifecycle-telnet-spring-context-holder project for
         Spring Boot
     </description>
 
