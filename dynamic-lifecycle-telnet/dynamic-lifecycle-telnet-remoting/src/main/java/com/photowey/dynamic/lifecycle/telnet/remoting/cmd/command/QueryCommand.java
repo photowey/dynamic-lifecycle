@@ -13,23 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.photowey.dynamic.lifecycle.telnet.remoting.service;
-
-import com.photowey.dynamic.lifecycle.telnet.core.exception.DynamicLifecycleException;
-import com.photowey.dynamic.lifecycle.telnet.ordered.order.DynamicPriorityOrdered;
+package com.photowey.dynamic.lifecycle.telnet.remoting.cmd.command;
 
 /**
- * {@code NamedService}
+ * {@code QueryCommand}
  *
  * @author photowey
- * @date 2021/12/05
+ * @date 2021/12/06
  * @since 1.0.0
  */
-public interface NamedService extends DynamicPriorityOrdered {
+public class QueryCommand extends AbstractCommandAdaptor {
 
-    void init() throws DynamicLifecycleException;
+    public QueryCommand(String command) {
+        this.command = command;
+    }
 
-    void dispose() throws DynamicLifecycleException;
+    @Override
+    public String name() {
+        return "query";
+    }
 
-    String name();
+    @Override
+    public boolean validate() {
+        return this.command.contains(" --query ") || this.command.contains(" -q ");
+    }
+
+    @Override
+    protected String doExecute(DynamicLifecycleCommandLine commandLine) throws Exception {
+        return null;
+    }
 }

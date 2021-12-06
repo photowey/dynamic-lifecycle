@@ -13,23 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.photowey.dynamic.lifecycle.telnet.remoting.service;
-
-import com.photowey.dynamic.lifecycle.telnet.core.exception.DynamicLifecycleException;
-import com.photowey.dynamic.lifecycle.telnet.ordered.order.DynamicPriorityOrdered;
+package com.photowey.dynamic.lifecycle.telnet.ordered.order;
 
 /**
- * {@code NamedService}
+ * {@code DynamicOrdered}
  *
  * @author photowey
  * @date 2021/12/05
  * @since 1.0.0
  */
-public interface NamedService extends DynamicPriorityOrdered {
-
-    void init() throws DynamicLifecycleException;
-
-    void dispose() throws DynamicLifecycleException;
-
-    String name();
+public interface DynamicOrdered {
+    int getOrder();
 }

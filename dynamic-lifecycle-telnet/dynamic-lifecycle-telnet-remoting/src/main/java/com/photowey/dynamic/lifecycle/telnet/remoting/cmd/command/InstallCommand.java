@@ -13,20 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.photowey.dynamic.lifecycle.telnet.core.order;
+package com.photowey.dynamic.lifecycle.telnet.remoting.cmd.command;
 
 /**
- * {@code PriorityOrdered}
+ * {@code InstallCommand}
  *
  * @author photowey
- * @date 2021/12/05
+ * @date 2021/12/06
  * @since 1.0.0
  */
-public interface PriorityOrdered extends Ordered {
+public class InstallCommand extends AbstractCommandAdaptor {
 
-    int HIGHEST_PRECEDENCE = Integer.MIN_VALUE;
+    public InstallCommand(String command) {
+        this.command = command;
+    }
 
-    int LOWEST_PRECEDENCE = Integer.MAX_VALUE;
+    @Override
+    public String name() {
+        return "install";
+    }
 
-    int DEFAULT_PRECEDENCE = 100;
+    @Override
+    public boolean validate() {
+        return this.command.contains(" --install ") || this.command.contains(" -i ");
+    }
+
+    @Override
+    protected String doExecute(DynamicLifecycleCommandLine commandLine) throws Exception {
+        return null;
+    }
 }

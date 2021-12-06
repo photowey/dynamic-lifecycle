@@ -39,6 +39,11 @@
             <groupId>com.photowey</groupId>
             <artifactId>dynamic-lifecycle-telnet-core</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.photowey</groupId>
+            <artifactId>dynamic-lifecycle-telnet-ordered</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

@@ -13,15 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.photowey.dynamic.lifecycle.telnet.core.order;
+package com.photowey.dynamic.lifecycle.telnet.ordered.order;
 
 /**
- * {@code Ordered}
+ * {@code DynamicPriorityOrdered}
  *
  * @author photowey
  * @date 2021/12/05
  * @since 1.0.0
  */
-public interface Ordered {
-    int getOrder();
+public interface DynamicPriorityOrdered extends DynamicOrdered {
+
+    int HIGHEST_PRECEDENCE = Integer.MIN_VALUE;
+
+    int LOWEST_PRECEDENCE = Integer.MAX_VALUE;
+
+    int DEFAULT_PRECEDENCE = 100;
 }
