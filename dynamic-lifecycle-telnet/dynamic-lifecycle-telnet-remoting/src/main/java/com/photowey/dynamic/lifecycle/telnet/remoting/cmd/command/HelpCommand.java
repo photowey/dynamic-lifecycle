@@ -49,5 +49,9 @@ public class HelpCommand extends AbstractCommandAdaptor {
     private static final String HELP_MESSAGE = "DynamicLifecycle Command Tips:\n"
             + "  USAGE: dynamic [option...] [arguments...]\n"
             + "  -h,--help:  Shows the help message.\n"
-            + "  -a:  Shows all plugin's table info.\n";
+            + "  -a,--all:  Shows all plugin's table info.\n"
+            + "  -q,--query:  Shows the plugin's query info.\n"
+            + "  -i,--install:  Install the plugin.\n"
+            + "  -ui,--uninstall:  Uninstall the plugin.\n"
+            + "  -up,--update:  Update the plugin info.\n";
 }

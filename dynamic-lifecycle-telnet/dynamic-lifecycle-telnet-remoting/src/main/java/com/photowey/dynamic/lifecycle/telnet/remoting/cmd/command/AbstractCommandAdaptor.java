@@ -38,6 +38,10 @@ public abstract class AbstractCommandAdaptor implements Command {
     protected static final String HELP_KEY = "help";
     private static final Option HELP = Option.builder("h").longOpt("help").required(false).hasArg(false).desc("Shows the help message.").build();
     private static final Option ALL = Option.builder("a").longOpt("all").required(false).hasArg(false).desc("Shows all plugin's table info.").build();
+    private static final Option QUERY = Option.builder("q").longOpt("query").required(false).hasArg(false).desc("Shows the plugin's query info.").build();
+    private static final Option INSTALL = Option.builder("i").longOpt("install").required(false).hasArg(false).desc("Install the plugin.").build();
+    private static final Option UN_INSTALL = Option.builder("ui").longOpt("uninstall").required(false).hasArg(false).desc("Uninstall the plugin.").build();
+    private static final Option UPDATE = Option.builder("up").longOpt("update").required(false).hasArg(false).desc("Update the plugin info.").build();
 
     protected Options options = new Options();
     protected String command;
@@ -45,6 +49,10 @@ public abstract class AbstractCommandAdaptor implements Command {
     protected AbstractCommandAdaptor() {
         this.addOption(HELP);
         this.addOption(ALL);
+        this.addOption(QUERY);
+        this.addOption(INSTALL);
+        this.addOption(UN_INSTALL);
+        this.addOption(UPDATE);
     }
 
     @Override
